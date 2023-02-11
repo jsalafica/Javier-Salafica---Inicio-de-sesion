@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <div class="jumbotron">
+        <h1>Login de usuario</h1>
+        <br />
+        <form
+          class="form"
+          role="form"
+          action="/login"
+          method="post"
+          autocomplete="off"
+        >
+          <div class="form-group">
+            <label for="username">Ingrese su nombre</label>
+            <input
+              name="username"
+              id="username"
+              placeholder="Nombre"
+              class="form-control"
+              type="text"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input class="btn btn-success my-3" type="submit" value="Enviar" />
+          </div>
+        </form>
+
+        <hr />
+        <div class="form-group">
+          <label for="btnRegister">Registrar usuario</label>
+          <button
+            class="btn btn-primary my-3"
+            id="btnRegister"
+            onclick="registerUser()"
+          >
+            Registrar
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function registerUser() {
+        location.href = "/register";
+      }
+    </script>
+  </body>
+</html>
